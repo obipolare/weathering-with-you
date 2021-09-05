@@ -1,67 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-scss/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Sass</title>
-</head>
-
-<body>
-    <div id="app">
-        <header class="header">
-            <nav class="nav">
-                <ul class="main-menu">
-                    <li class="main-menu__item" v-for="header of headerList">
-                        <a class="main-menu__link" :href="header.url" v-text="header.name"></a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="videoMediyak">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/AmPX3ZLahDk" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <h2>Just Never Give up</h2>
-            </div>
-        </header>
-        <main class="main-content">
-            <section class="firstSection">
-                <!-- <h3>Articles</h3> -->
-                <articles v-for="article in firstSection" :title="article.title" :paragraph="article.paragraph"
-                    :img="article.img" :info="article.info">
-                </articles>
-            </section>
-            <section class="secondSection">
-                <articles v-for="article in secondSection" :title="article.title" :paragraph="article.paragraph"
-                    :img="article.img" :info="article.info">
-                </articles>
-            </section>
-        </main>
-        <footer class="footer">
-            <p>All Right Reserved &copy;</p>
-        </footer>
-    </div>
-
-</body>
-<script type="text/x-template" id="first-section-template">
-    <article class="article">
-            <h1 v-text="title"></h1>
-            <p v-text="paragraph"></p>
-            <img class="img" :src="img" :alt="info">
-    </article>
-</script>
-<!-- <script type="text/x-template" id="second-section-template">
-    <section class="secondSection">
-            <article class="article">
-                <h1 v-text="title"></h1>
-                <p v-text="paragraph"></p>
-            <img class="img" :src="img" alt="">
-            </article>
-    </section> -->
-</script>
-<script src="components/content.js"></script>
-<script src="scripts.js"></script>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <title>Weathering App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
